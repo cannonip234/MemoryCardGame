@@ -7,19 +7,18 @@
 
 /* Project I - Tiêu đề phụ */
 .title-small {
-    -fx-font-size: 32px; /* Tăng từ 24px lên 32px */
+    -fx-font-size: 32px;
     -fx-font-weight: bold;
     -fx-text-fill: #ffcc00; /* Vàng Gold */
     -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.9), 10, 0, 2, 2);
-    -fx-letter-spacing: 2px; /* Tạo độ thoáng cho chữ */
+    -fx-letter-spacing: 2px;
 }
 
 /* Memory Card Game - Tiêu đề chính */
 .title-large {
-    -fx-font-size: 85px; /* Tăng từ 52px lên 85px để tạo sự nổi bật */
+    -fx-font-size: 85px;
     -fx-font-weight: bold;
     -fx-text-fill: #ffffff;
-    /* Tăng độ đậm của hiệu ứng đổ bóng để chữ trắng nổi trên nền gỗ */
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.9), 20, 0, 0, 0),
                 dropshadow(one-pass-box, rgba(0, 0, 0, 0.5), 5, 0, 5, 5);
 }

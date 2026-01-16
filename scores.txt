@@ -34,3 +34,4 @@ Diff: Medium | Name: sir | Time: 00:37 | Moves: 19
 Diff: 2x2 | Name:  | Time: 00:06 | Moves: 3
 Diff: Easy | Name: huy | Time: 00:09 | Moves: 6
 Diff: Easy | Name:  | Time: 00:08 | Moves: 6
+Diff: Easy | Name:  | Time: 00:05 | Moves: 4
