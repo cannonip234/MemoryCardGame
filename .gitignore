@@ -37,3 +37,17 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+/shelf/
+/workspace.xml
+/out/
+/.idea/
+/*.iml
+/target/
+
+
+
+
+
+*.log
+scores.txt
