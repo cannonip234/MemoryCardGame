@@ -18,11 +18,11 @@ public class DifficultySelection {
     }
 
     public void show() {
-        // Title
+        // 1. Tiêu đề chính
         Label lblTitle = new Label("SELECT DIFFICULTY");
         lblTitle.getStyleClass().add("title-large");
 
-        // --- 1. Buttons ---
+        // 2. nút chọn diff
         Button btnEasy = new Button("EASY (2x4)");
         Button btnMedium = new Button("MEDIUM (4x4)");
         Button btnHard = new Button("HARD (6x6)");
@@ -35,7 +35,7 @@ public class DifficultySelection {
         btnCustom.getStyleClass().add("button");
         btnBack.getStyleClass().add("button");
 
-        // --- 2. Custom Size Input Box ---
+        // 3. Custom size
         Label lblCustomTitle = new Label("ENTER SIZE (Rows x Columns)");
         lblCustomTitle.getStyleClass().add("title-small");
         lblCustomTitle.setStyle("-fx-font-size: 30px; -fx-text-fill: white;");
@@ -65,15 +65,13 @@ public class DifficultySelection {
         customInputBox.setAlignment(Pos.CENTER);
         customInputBox.setPadding(new Insets(20, 0, 20, 0));
 
+        VBox.setMargin(lblError, new Insets(40, 0, 0, 0));
+
         customInputBox.setVisible(false);
         customInputBox.setManaged(false);
 
-        // --- 3. logic  ---
-        btnEasy.setOnAction(e -> {
-
-            new Game(stage, new Difficulty("Easy", 2, 4)).show();
-        });
-
+        // 4. Xử lý Logic event
+        btnEasy.setOnAction(e -> new Game(stage, new Difficulty("Easy", 2, 4)).show());
         btnMedium.setOnAction(e -> new Game(stage, new Difficulty("Medium", 4, 4)).show());
         btnHard.setOnAction(e -> new Game(stage, new Difficulty("Hard", 6, 6)).show());
 
@@ -109,7 +107,7 @@ public class DifficultySelection {
 
         btnBack.setOnAction(e -> new Menu(stage).show());
 
-        // --- 4. thằng rị ngu ---
+        // 5. Layout
         VBox difficultyButtons = new VBox(25, btnEasy, btnMedium, btnHard, btnCustom);
         difficultyButtons.setAlignment(Pos.CENTER);
 
@@ -124,6 +122,7 @@ public class DifficultySelection {
         root.getChildren().addAll(lblTitle, spacer1, difficultyButtons, customInputBox, spacer2, btnBack);
         root.setPadding(new Insets(50, 0, 50, 0));
 
+        // Background
         BackgroundImage bg = new BackgroundImage(
                 new Image(getClass().getResource("background.jpg").toExternalForm(),
                         Main.WIDTH, Main.HEIGHT, false, true),
@@ -132,6 +131,7 @@ public class DifficultySelection {
                 BackgroundSize.DEFAULT);
         root.setBackground(new Background(bg));
 
+        // 6. Scene Setup
         Scene scene = new Scene(root, Main.WIDTH, Main.HEIGHT);
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 
